@@ -1,24 +1,11 @@
-import React, {useState} from 'react';
-import {Button, Text, View} from 'react-native';
-
-
+import React from 'react';
+import {View} from 'react-native';
+import ComponentOne from './ComponentOne';
 
 const App = () => {
-
-    const [state, setState] = useState({
-        name:"Ruhul Amin",
-        city:"Dhaka"
-    });
-
-   const changeValue=()=>{
-        setState({name: "Liya",city: "Gb,Bd"});
-    }
-
     return (
         <View>
-            <Text>{state.name}</Text>
-            <Text>{state.city}</Text>
-            <Button title="Click Me" onPress={changeValue}/>
+            <ComponentOne name="Sujon" city="Dhaka" age="29" />
         </View>
     );
 };
