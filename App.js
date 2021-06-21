@@ -1,12 +1,18 @@
 import React, {Component} from 'react';
-import {View} from 'react-native';
+import {Text, View} from 'react-native';
 import ComponentOne from './ComponentOne';
 
 class App extends Component {
     render() {
         return (
-            <View>
-                <ComponentOne name="Ra Sujon" city="Dhaka" age="23" />
+            <View style={{flexDirection:'row',height:"100%",width:"100%"}}>
+            <View style={{backgroundColor:'orange',height:"100%",width:"32%"}}>
+            <View style={{backgroundColor:'red',height:"100%",width:"32%"}}>
+            <View style={{backgroundColor:'black',height:"100%",width:"32%"}}>
+
+            </View>
+            </View>
+            </View>
             </View>
         );
     }
