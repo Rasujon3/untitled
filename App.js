@@ -10,10 +10,10 @@ class App extends Component {
 
     render() {
         return (
-            <View style={{height:'100%',width:'100%'}}>
-                <Image style={{height:'50%',width:'100%'}} source={{uri:'https://sujonrafkhata.000webhostapp.com/admin/upload/cb2324172b.png'}}/>
-                <Image style={{height:'50%',width:'100%'}} source={require('./images/sujon.png')}/>
-
+            <View style={{backgroundColor:'white',flex:3}}>
+                <View style={{backgroundColor: 'red', flex: 1}}/>
+                <View style={{backgroundColor: 'blue', flex: 1}}/>
+                <View style={{backgroundColor: 'green', flex: 1}}/>
             </View>
         );
     }
