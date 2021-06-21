@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Alert, Button, Image, View} from 'react-native';
+import {Alert, Button, Image, ScrollView, View} from 'react-native';
 import WebView from 'react-native-webview';
 
 class App extends Component {
@@ -10,9 +10,20 @@ class App extends Component {
 
     render() {
         return (
-            <View style={{backgroundColor:'white'}}>
-                <View style={{backgroundColor: 'red', height:720,width:360}}/>
-            </View>
+            <ScrollView horizontal={true}>
+                <View style={{backgroundColor: 'red', height:100,width:360}}/>
+                <View style={{backgroundColor: 'green', height:100,width:360}}/>
+                <View style={{backgroundColor: 'blue', height:100,width:360}}/>
+                <View style={{backgroundColor: 'teal', height:100,width:360}}/>
+                <View style={{backgroundColor: 'red', height:100,width:360}}/>
+                <View style={{backgroundColor: 'green', height:100,width:360}}/>
+                <View style={{backgroundColor: 'blue', height:100,width:360}}/>
+                <View style={{backgroundColor: 'teal', height:100,width:360}}/>
+                <View style={{backgroundColor: 'red', height:100,width:360}}/>
+                <View style={{backgroundColor: 'green', height:100,width:360}}/>
+                <View style={{backgroundColor: 'blue', height:100,width:360}}/>
+                <View style={{backgroundColor: 'teal', height:100,width:360}}/>
+            </ScrollView>
         );
     }
 }
