@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Alert, Button, View} from 'react-native';
+import {Alert, Button, Image, View} from 'react-native';
 import WebView from 'react-native-webview';
 
 class App extends Component {
@@ -11,7 +11,9 @@ class App extends Component {
     render() {
         return (
             <View style={{height:'100%',width:'100%'}}>
-                <WebView source={{uri:'https://www.google.com'}}/>
+                <Image style={{height:'50%',width:'100%'}} source={{uri:'https://sujonrafkhata.000webhostapp.com/admin/upload/cb2324172b.png'}}/>
+                <Image style={{height:'50%',width:'100%'}} source={require('./images/sujon.png')}/>
+
             </View>
         );
     }
