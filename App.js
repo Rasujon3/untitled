@@ -1,17 +1,16 @@
 import React, {Component} from 'react';
-import { View} from 'react-native';
+import {Alert, Button, View} from 'react-native';
 
 class App extends Component {
+
+    alertMe=()=>{
+        Alert.alert("Sujon");
+    }
+
     render() {
         return (
-            <View style={{flexDirection:'row',height:"100%",width:"100%"}}>
-            <View style={{backgroundColor:'orange',height:"100%",width:"33%"}}></View>
-            <View style={{backgroundColor:'red',height:"100%",width:"33%"}}></View>
-            <View style={{backgroundColor:'black',height:"100%",width:"34%"}}></View>
-
-
-
-
+            <View>
+                <Button color="green" title="Save" onPress={this.alertMe}/>
             </View>
         );
     }
