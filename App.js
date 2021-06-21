@@ -40,7 +40,46 @@ class App extends Component {
             subtitle: 'Country Name, Nation name',
             img: 'https://cdn.pixabay.com/photo/2021/06/17/04/42/man-6342665_960_720.jpg',
         },
+        {
+            title: 'Bangladesh',
+            subtitle: 'Country Name, Nation name',
+            img: 'https://cdn.pixabay.com/photo/2021/06/17/04/42/man-6342665_960_720.jpg',
+        },
+        {
+            title: 'India',
+            subtitle: 'Country Name, Nation name',
+            img: 'https://cdn.pixabay.com/photo/2021/06/17/19/06/sunset-6344387_960_720.jpg',
+        },
+        {
+            title: 'Pakistan',
+            subtitle: 'Country Name, Nation name',
+            img: 'https://cdn.pixabay.com/photo/2021/06/17/04/42/man-6342665_960_720.jpg',
+        },
+        {
+            title: 'Nepal',
+            subtitle: 'Country Name, Nation name',
+            img: 'https://cdn.pixabay.com/photo/2021/06/17/19/06/sunset-6344387_960_720.jpg',
+        },
+        {
+            title: 'Bhutan',
+            subtitle: 'Country Name, Nation name',
+            img: 'https://cdn.pixabay.com/photo/2021/06/17/04/42/man-6342665_960_720.jpg',
+        },
+        {
+            title: 'Australia',
+            subtitle: 'Country Name, Nation name',
+            img: 'https://cdn.pixabay.com/photo/2021/06/17/19/06/sunset-6344387_960_720.jpg',
+        },
+        {
+            title: 'USA',
+            subtitle: 'Country Name, Nation name',
+            img: 'https://cdn.pixabay.com/photo/2021/06/17/04/42/man-6342665_960_720.jpg',
+        },
     ];
+
+    onClickItem=(Alerttitle)=>{
+        Alert.alert(Alerttitle)
+    }
 
     ChildView = ({Childtitle, Childsubtitle, img}) => {
         return (
@@ -52,7 +91,7 @@ class App extends Component {
                 </View>
 
                 <View style={{flex: 70,padding:10}}>
-                    <Text style={{color: 'black', fontSize: 18}}>{Childtitle}</Text>
+                    <Text onPress={this.onClickItem.bind(this,Childsubtitle)} style={{color: 'black', fontSize: 18}}>{Childtitle}</Text>
                     <Text style={{color: 'black', fontSize: 12}}>{Childsubtitle}</Text>
 
                 </View>
