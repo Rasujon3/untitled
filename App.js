@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import {SafeAreaView, SectionList, Text, View} from 'react-native';
+import {Alert, SafeAreaView, SectionList, Text, View} from 'react-native';
 
 class App extends Component {
 
     itemChild = ({itemData}) => {
         return (
             <View>
-                <Text>{itemData}</Text>
+                <Text onPress={this.childClick.bind(this,itemData)}>{itemData}</Text>
             </View>
         );
     };
@@ -14,10 +14,17 @@ class App extends Component {
     itemHeadChild = ({header}) => {
         return (
             <View style={{height: 20, width: '100%', backgroundColor: 'blue'}}>
-                <Text style={{height: 20, width: '100%', backgroundColor: 'blue'}}>{header}</Text>
+                <Text onPress={this.childHeadClick.bind(this,header)} style={{color:'white'}}>{header}</Text>
             </View>
         );
     };
+
+    childClick=(childName)=>{
+        Alert.alert(childName);
+    }
+    childHeadClick=(header)=>{
+        Alert.alert(header);
+    }
 
     DATA = [
         {title: 'Bangladesh', data: ['Rangpur', 'Dhaka', 'Khulna', 'Rajshahi']},
