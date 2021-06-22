@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Picker, StatusBar, Text, View} from 'react-native';
+import {ActivityIndicator, Picker, StatusBar, Text, View} from 'react-native';
 
 class App extends Component {
 constructor() {
@@ -13,6 +13,7 @@ constructor() {
     render() {
         return (
             <View>
+                <ActivityIndicator size="large" color="#ff2233"/>
                 <Picker
                     selectedValue={this.state.selectedItemValue}
                     onValueChange={(itemValue, itemPosition)=>
