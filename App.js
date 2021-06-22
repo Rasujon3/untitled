@@ -1,19 +1,45 @@
 import React, {Component} from 'react';
-import {Alert, Text, TouchableHighlight, View} from 'react-native';
+import {SafeAreaView, SectionList, Text, View} from 'react-native';
 
 class App extends Component {
-    alertMe=()=>{
-        Alert.alert("Hello");
-    }
+
+    itemChild = ({itemData}) => {
+        return (
+            <View>
+                <Text>{itemData}</Text>
+            </View>
+        );
+    };
+
+    itemHeadChild = ({header}) => {
+        return (
+            <View style={{height: 20, width: '100%', backgroundColor: 'blue'}}>
+                <Text style={{height: 20, width: '100%', backgroundColor: 'blue'}}>{header}</Text>
+            </View>
+        );
+    };
+
+    DATA = [
+        {title: 'Bangladesh', data: ['Rangpur', 'Dhaka', 'Khulna', 'Rajshahi']},
+        {title: 'India', data: ['Rangpur', 'Dhaka', 'Khulna', 'Rajshahi']},
+        {title: 'Pakistan', data: ['Rangpur', 'Dhaka', 'Khulna', 'Rajshahi']},
+        {title: 'Pakistan', data: ['Rangpur', 'Dhaka', 'Khulna', 'Rajshahi']},
+        {title: 'Pakistan', data: ['Rangpur', 'Dhaka', 'Khulna', 'Rajshahi']},
+        {title: 'Pakistan', data: ['Rangpur', 'Dhaka', 'Khulna', 'Rajshahi']},
+        {title: 'Pakistan', data: ['Rangpur', 'Dhaka', 'Khulna', 'Rajshahi']},
+        {title: 'Pakistan', data: ['Rangpur', 'Dhaka', 'Khulna', 'Rajshahi']},
+    ]
+
     render() {
         return (
-            <View style={{flex:1, flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
-
-                <TouchableHighlight activeOpacity={0.5} underlayColor="#DDDDDD" onPress={this.alertMe}>
-                    <Text style={{fontSize:30}}>Hello</Text>
-                </TouchableHighlight>
-
-            </View>
+            <SafeAreaView>
+                <SectionList
+                    sections={this.DATA}
+                    renderItem={({item}) => <this.itemChild itemData={item}/>}
+                    renderSectionHeader={({section:{title}})=><this.itemHeadChild header={title}/>}
+                keyExtractor={(item,index)=>item+index}
+                />
+            </SafeAreaView>
         );
     }
 }
