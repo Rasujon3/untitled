@@ -1,18 +1,28 @@
 import React, {Component} from 'react';
-import {ActivityIndicator, Picker, StatusBar, Text, View} from 'react-native';
+import {ActivityIndicator, Picker, StatusBar, Switch, Text, View} from 'react-native';
 
 class App extends Component {
 constructor() {
     super();
     this.state={
         selectedItemValue:" ",
-        selectedItemPosition:" "
+        selectedItemPosition:" ",
+        switchStatus: false
 
     }
 }
     render() {
         return (
             <View>
+                <Switch
+                    value={this.state.switchStatus}
+                    onValueChange={(switchValue)=>
+                    {this.setState({switchStatus:switchValue})}}
+                >
+                </Switch>
+
+                <Text>{this.state.switchStatus?'ON':'OFF'}</Text>
+
                 <ActivityIndicator size="large" color="#ff2233"/>
                 <Picker
                     selectedValue={this.state.selectedItemValue}
