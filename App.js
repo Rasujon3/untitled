@@ -1,16 +1,18 @@
 import React, {Component} from 'react';
-import {ImageBackground, Text, View} from 'react-native';
+import {Alert, Text, TouchableHighlight, View} from 'react-native';
 
 class App extends Component {
+    alertMe=()=>{
+        Alert.alert("Hello");
+    }
     render() {
         return (
-            <View style={{flex: 1, flexDirection: 'column'}}>
-                <ImageBackground style={{flex: 1, resizeMode: 'cover', justifyContent: 'center'}}
-                                 source={{uri: 'https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_960_720.jpg'}}>
-                    <Text style={{color: 'white', fontSize: 40}}>Hello</Text>
-                    <Text style={{color: 'white', fontSize: 40}}>Hello</Text>
-                    <Text style={{color: 'white', fontSize: 40}}>Hello</Text>
-                </ImageBackground>
+            <View style={{flex:1, flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
+
+                <TouchableHighlight activeOpacity={0.5} underlayColor="#DDDDDD" onPress={this.alertMe}>
+                    <Text style={{fontSize:30}}>Hello</Text>
+                </TouchableHighlight>
+
             </View>
         );
     }
